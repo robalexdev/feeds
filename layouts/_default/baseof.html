@@ -4,25 +4,28 @@
     {{ partial "head" . }}
     {{ block "extrahead" . }}
     {{ end }}
+    {{ partial "analytics" . }}
   </head>
   <body>
-  {{ partial "topnav" . }}
+  <div class="top-nav">
+  <a href="../">Blog Home</a>
+  |
+  <a href="/following/">Feeds I Follow</a>
+  |
+  <a href="/discover/">Discover More</a>
+  </div>
+  <hr>
 
   <div class="main">
   {{- block "main" . -}}
   {{- end -}}
   </div>
 
-  {{- block "analytics" . -}}
-  {{- end -}}
-
-  <footer>
-    <div style="font-size: 2em">📡</div>
-    <br />
-    Powered by <a href="https://github.com/ralexander-phi/Feed2Pages">Feed2Pages</a>
-    <br />
-    <br />
-    Last refreshed: {{ time.Now | time.Format "2 January 2006 at 15:04 (MST)"}}
-  </footer>
+  <p class="footer">
+  This is a <a href="https://github.com/ralexander-phi/feed2pages">Feed2Pages</a> blogroll. This page was last updated at 
+  <span title="{{ time.Now }}">
+    {{ time.Now | time.Format "2 January 2006 at 15:04 (MST)"}}</span> by a GitHub Action.
+  </p>
   </body>
+
 </html>

@@ -1,7 +1,11 @@
 {{ define "main" }}
 
-{{ $paginator := .Paginate (where .Site.RegularPages "Section" "reading") }}
+<h1>Reading</h1>
 
+<p>Here are the most recent posts from the feeds I follow.</p>
+
+
+{{ $paginator := .Paginate (where .Site.RegularPages "Section" "reading") }}
 {{- range $paginator.Pages -}}
   {{ partial "post" . }}
 {{- end -}}

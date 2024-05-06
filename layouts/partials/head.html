@@ -8,86 +8,66 @@
 {{ block "extrahead" . }}
 {{ end }}
 <style>
-h1 {
-  font-size: 1.5em;
-  text-align: center;
-  margin-bottom: 1.4em;
-}
-
-img {
-  width: 1em;
-}
-
 body {
-  background-color: #ddd;
-  margin: auto;
-  max-width: 60em;
+  margin: 2em;
+  font-size: 1.2em;
   font-family: system-ui, -apple-system, Helvetica;
+  background-color: #eee;
+  padding-bottom: 10em;
 }
 
-div.main {
-  padding: 1em;
-}
+  h3 {
+    margin-top: 3em;
+  }
 
-div.topnav {
-  background-color: #58e;
-  padding: 0.3em 0.5em 0.3em 0.5em;
-  font-size: 1.1em;
-  margin: 0.5em 0 1em 0;
-}
+  h2 {
+    margin-top: 3em;
+    font-size: 0.7em;
+  }
 
-div.topnav > a {
-  font-size: 0.9em;
-  color: #eee;
-  padding-right: 0.8em;
-}
+  h2 > a {
+    font-size: 1.6em;
+    font-style: normal;
+  }
 
-div.topnav > a.brand {
-  font-size: 1.2em;
-  font-weight: bold;
-}
+  a {
+    color: #118;
+  }
 
-div.topnav {
-  font-size: 1.2em;
-}
+  a:visited {
+    color: #717;
+  }
 
-a {
-  text-decoration: none;
-  color: #22c;
-}
+  a.rss {
+    background-color: #e83;
+    padding: 6px;
+  }
 
-a:hover {
-  text-decoration: underline;
-}
+  span.sep:before {
+    padding: 1.2em;
+    content: '\2234';
+  }
 
-h2 {
-  font-size: 1.2em;
-  margin: 0 0 0.2em 0;
-}
+  span.host {
+    font-size: 0.7em;
+    padding-left: 1em;
+  }
 
-div.post {
-  padding: 1em;
-  margin-bottom: 0.2em;
-}
-
-div.post div.details {
-  font-size: 1em;
-  margin-top: 0.8em;
-  margin-bottom: 0.4em;
-}
-
-footer {
-  margin: 6em;
-  text-align: center;
-}
+  div.top-nav > a {
+    padding: 1em;
+  }
 
 ul.pagination {
-  text-align: center;
   margin: 3em;
 }
 li.page-item {
   font-size: 1.2em;
   display: inline;
   padding: 0.4em;
+}
+
+p.footer {
+  padding-top: 3em;
+  font-size: 0.8em;
 }
 </style>

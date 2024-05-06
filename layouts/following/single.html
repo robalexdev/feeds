@@ -65,17 +65,4 @@ p {
 {{ end }}
 </div>
 
-{{ $posts := where
-      (where .Site.RegularPages "Section" "post")
-    "Params.feed_id" .Params.id }}
-
-{{ if $posts }}
-  <h3>Posts</h3>
-  {{ range $posts }}
-    {{ partial "shortpost" . }}
-  {{ end }}
-{{ else }}
-  <h3>No recent posts available</h3>
-{{ end }}
-
 {{ end }}

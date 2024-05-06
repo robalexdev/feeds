@@ -13,7 +13,9 @@ p {
 
 {{ define "main" }}
 
-<p>This news feed tracks the following feeds:</p>
+<h1>Following</h1>
+
+<p>Here is my blogroll containing the RSS feeds I follow</p>
 
 {{ $paginator := .Paginate .Pages }}
 {{ range $paginator.Pages }}
