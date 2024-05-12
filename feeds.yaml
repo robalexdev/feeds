@@ -18,6 +18,6 @@ block_domains:
   - youtube.com
   - youtu.be
 
-discover_depth: 2
+discover_depth: 4
 max_recommendations_per_feed: 50
 max_recommendations: 2000

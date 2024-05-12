@@ -4,8 +4,9 @@
 
 <p>Here are the most recent posts from the feeds I follow.</p>
 
-
-{{ $paginator := .Paginate (where .Site.RegularPages "Section" "reading") }}
+{{ $pages := where .Site.RegularPages "Section" "reading" }}
+{{ $sorted := $pages.ByDate.Reverse }}
+{{ $paginator := .Paginate $sorted }}
 {{- range $paginator.Pages -}}
   {{ partial "post" . }}
 {{- end -}}
