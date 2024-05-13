@@ -14,6 +14,11 @@ div.recommender {
 p {
   font-size: 1.2em;
 }
+
+ul {
+  padding: 0, 0.5em;
+  margin: 0.3em;
+}
 </style>
 {{ end }}
 
@@ -38,11 +43,18 @@ p {
       &mdash;
       {{ .Description | truncate 200 }}
     {{ end }}
+
+    {{- $blogroll := where (where .Site.RegularPages "Section" "network") "Params.destination_url" .Params.feedlink -}}
+    {{ if $blogroll }}
     <div class="recommender">Recommended by: 
-      {{ range .Params.recommended_by }}
-        <span class="recommender">{{ . }}</span>
-      {{ end }}
+    <ul>
+    {{ range $blogroll }}
+    <li><a class="recommender" href="{{ .Params.source_url }}">{{ .Params.source_url }}</a></li>
+    {{ end }}
+    </ul>
     </div>
+    {{ end }}
+
   </div>
   {{ end }}
 {{ end }}
