@@ -1,4 +1,5 @@
-feed_url: https://feedland.com/opml?screenname=robalexdev
+feed_urls:
+  - https://feedland.com/opml?screenname=robalexdev
 
 post_age_limit_days: 300
 max_posts_per_feed: 30
