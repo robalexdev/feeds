@@ -6,13 +6,14 @@
 {{ block "extrahead" . }}
 {{ end }}
 <style>
-body {
-  margin: 2em;
-  font-size: 1.2em;
-  font-family: system-ui, -apple-system, Helvetica;
-  background-color: #eee;
-  padding-bottom: 10em;
-}
+  body {
+    margin: auto;
+    padding: 1em;
+    max-width: 60em;
+    font-family: system-ui, -apple-system, Helvetica;
+    background-color: #eee;
+    padding-bottom: 10em;
+  }
 
   h3 {
     margin-top: 3em;
@@ -51,8 +52,12 @@ body {
     padding-left: 1em;
   }
 
+  div.top-nav {
+  }
+
   div.top-nav > a {
-    padding: 1em;
+    padding-right: 1em;
+    break-inside: avoid;
   }
 
 ul.pagination {

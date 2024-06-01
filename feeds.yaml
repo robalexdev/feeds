@@ -22,3 +22,4 @@ block_domains:
 discover_depth: 4
 max_recommendations_per_feed: 50
 max_recommendations: 2000
+remove_old_content: true

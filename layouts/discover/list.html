@@ -31,8 +31,11 @@ ul {
 {{ $paginator := .Paginate .Pages }}
 {{ range $paginator.Pages }}
   {{ if and (.Title) (.Params.link) }}
+
+  {{- $blogroll := where (where (where .Site.RegularPages "Section" "network") "Params.destination_url" .Params.feedlink) "Params.source_type" 3 -}}
+  {{ if $blogroll }}
   <div class="rec">
-    <a href="{{ .Params.link }}" rel=“UGC” rel="nofollow">
+    <a href="{{ .Params.link }}" rel="ugc nofollow">
       {{ if .Title }}
         {{ .Title | truncate 80 }}
       {{ else }}
@@ -43,9 +46,6 @@ ul {
       &mdash;
       {{ .Description | truncate 200 }}
     {{ end }}
-
-    {{- $blogroll := where (where .Site.RegularPages "Section" "network") "Params.destination_url" .Params.feedlink -}}
-    {{ if $blogroll }}
     <div class="recommender">Recommended by: 
     <ul>
     {{ range $blogroll }}
