@@ -2,7 +2,6 @@
 
 A blogroll that aggregates RSS feeds into your own news feed web site.
 
-
 ## Use cases
 
 * A personal RSS reader you can access from all your devices
