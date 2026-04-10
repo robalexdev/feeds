@@ -1,3 +1,7 @@
+> [!CAUTION]
+> [This repo has moved to GitLab](https://gitlab.com/robalexdev/feeds)
+
+
 # Feed2Pages
 
 A blogroll that aggregates RSS feeds into your own news feed web site.
